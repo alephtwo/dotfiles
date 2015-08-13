@@ -1,16 +1,35 @@
-" enable line numbers
+" Use Line Numbers and Syntax
 set nu
+syntax on
 
-" no tabs!
+set ai " Auto Indent
+set si " Smart Indent
+set nowrap " Disable Wrapping
+set cursorline " Show Horizontal Cursor
+
+" Spaces > Tabs
+set expandtab
+set smarttab
 set tabstop=4
 set shiftwidth=4
-set expandtab
 
-" no wrapping
-set nowrap
+" Enable the mouse
+if has('mouse')
+  set mouse=a
+endif
 
-" show cursors
-set cursorline
+" Disable backups
+set nobackup
+set nowb
+set noswapfile
 
-" syntax
-syntax on 
+" Show the status bar
+set laststatus=2
+set statusline=\ %F%m%r%h\ %w\ \ pwd:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+
+" Allow trimming of whitespace
+function! Trim()
+  %s/\s\+$//e
+endfunction
+
+filetype plugin indent on

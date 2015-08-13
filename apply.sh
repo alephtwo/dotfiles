@@ -1,4 +1,6 @@
 #! /usr/bin/env sh
 
-ln -s ./.vimrc ~/.vimrc
-ln -s ./.zshrc ~/.zshrc
+ABS=$(pwd)
+
+ln -s $ABS/.vimrc $HOME/.vimrc
+ln -s $ABS/.zshrc $HOME/.zshrc
