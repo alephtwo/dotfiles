@@ -4,13 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
-  Plugin 'bling/vim-airline'
-  Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin indent on
-
-" 256-bit color
-let &t_Co=256
 
 " Use Line Numbers and Syntax
 set nu
@@ -37,10 +32,9 @@ set nobackup
 set nowb
 set noswapfile
 
-" Show statusline
+" Show the status bar
 set laststatus=2
-let g:airline_theme='luna'
-let g:airline_powerline_fonts=1
+set statusline=\ %F%m%r%h\ %w\ \ pwd:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " Allow trimming of whitespace
 function! Trim()
