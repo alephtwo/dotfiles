@@ -20,6 +20,7 @@ export PATH="$PATH:$HOME/bin"
 # custom
 export EDITOR='vim'
 export ORACLE_HOME=/usr/lib/oracle/12.1/client64/
+export TERM='xterm-256color'
 
 # aliases
 alias xclip="xclip -sel clip"
