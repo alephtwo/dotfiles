@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
+  Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 call vundle#end()
 filetype plugin indent on
 
@@ -34,7 +35,7 @@ set noswapfile
 
 " Show the status bar
 set laststatus=2
-set statusline=\ %F%m%r%h\ %w\ \ pwd:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set t_Co=256
 
 " Allow trimming of whitespace
 function! Trim()
