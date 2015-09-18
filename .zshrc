@@ -24,4 +24,4 @@ export TERM='xterm-256color'
 
 # aliases
 alias xclip="xclip -sel clip"
-
+alias uuid="ruby -e 'require \"securerandom\"; print SecureRandom.uuid' | xclip"
