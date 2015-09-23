@@ -3,7 +3,8 @@ export ZSH=$HOME/.oh-my-zsh
 export UPDATE_ZSH_DAYS=14
 ZSH_THEME="aleph"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git colored-man)
+ZSH_TMUX_AUTOSTART=true
+plugins=(tmux git colored-man)
 source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
