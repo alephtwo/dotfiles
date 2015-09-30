@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
+  Plugin 'elixir-lang/vim-elixir'
   Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 call vundle#end()
 filetype plugin indent on
