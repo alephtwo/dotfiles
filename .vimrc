@@ -21,8 +21,8 @@ set cursorline " Show Horizontal Cursor
 " Spaces > Tabs
 set expandtab
 set smarttab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 " Enable the mouse
 if has('mouse')
