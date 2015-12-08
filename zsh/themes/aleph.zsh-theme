@@ -2,7 +2,7 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}±‹"
 ZSH_THEME_GIT_PROMPT_SUFFIX="›%{$reset_color%}"
 
 local hg_prefix="%{$fg[yellow]%}☿"
-local hg_info="%{$fg[red]%}{branch}%{$reset_color%}{${fg[green]%}@{bookmark}%{$reset_color%}.%{$fg[blue]%}{tags|,}{status|modified|unknown}{update}%{$reset_color%}"
+local hg_info="%{$fg[red]%}{branch}%{$reset_color%}${fg[green]%}{@{bookmark}}%{$reset_color%}%{$fg[blue]%}{status|modified|unknown}{update}%{$reset_color%}"
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
