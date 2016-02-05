@@ -1,12 +1,11 @@
-" Use Vundle
+" Use Pathogen
+call pathogen#infect()
+call pathogen#helptags()
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+" Configure vim
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-  Plugin 'VundleVim/Vundle.vim'
-  Plugin 'elixir-lang/vim-elixir'
-  Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
-call vundle#end()
 filetype plugin indent on
 
 " Use Line Numbers and Syntax
@@ -25,9 +24,9 @@ set tabstop=2
 set shiftwidth=2
 
 " Enable the mouse
-if has('mouse')
-  set mouse=a
-endif
+" if has('mouse')
+"   set mouse=a
+" endif
 
 " Disable backups
 set nobackup

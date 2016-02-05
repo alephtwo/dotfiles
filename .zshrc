@@ -10,8 +10,6 @@ source $ZSH/oh-my-zsh.sh
 
 # version managers
 source $HOME/.rvm/scripts/rvm
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
 # set path
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -26,3 +24,10 @@ export TERM='xterm-256color'
 # aliases
 alias xclip="xclip -sel clip"
 alias uuid="ruby -e 'require \"securerandom\"; print SecureRandom.uuid' | xclip"
+alias docker-purge="docker rm $(docker ps -aq)"
+alias cowf="fortune | cowsay"
+alias shrug="echo '¯\_(ツ)_/¯' | xclip"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/ben/.sdkman"
+[[ -s "/home/ben/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ben/.sdkman/bin/sdkman-init.sh"
