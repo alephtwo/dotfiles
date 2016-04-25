@@ -1,8 +1,3 @@
-" Use Pathogen
-call pathogen#infect()
-call pathogen#helptags()
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-
 " Configure vim
 set nocompatible
 filetype off
