@@ -18,7 +18,6 @@ export PATH="$PATH:$HOME/bin"
 
 # custom
 export EDITOR='vim'
-export ORACLE_HOME=/usr/lib/oracle/12.1/client64/
 export TERM='screen-256color'
 
 # aliases
@@ -27,7 +26,11 @@ alias uuid="ruby -e 'require \"securerandom\"; print SecureRandom.uuid' | xclip"
 alias docker-purge="docker rm $(docker ps -aq)"
 alias cowf="fortune | cowsay"
 alias shrug="echo '¯\_(ツ)_/¯' | xclip"
+alias jshell="docker run -it java:9 jshell"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/ben/.sdkman"
-[[ -s "/home/ben/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ben/.sdkman/bin/sdkman-init.sh"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
+[ -s "/home/ben/.jabba/jabba.sh" ] && source "/home/ben/.jabba/jabba.sh"
