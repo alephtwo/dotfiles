@@ -23,7 +23,6 @@ export TERM='screen-256color'
 # aliases
 alias xclip="xclip -sel clip"
 alias uuid="ruby -e 'require \"securerandom\"; print SecureRandom.uuid' | xclip"
-alias docker-purge="docker rm $(docker ps -aq)"
 alias cowf="fortune | cowsay"
 alias shrug="echo '¯\_(ツ)_/¯' | xclip"
 alias jshell="docker run -it java:9 jshell"
