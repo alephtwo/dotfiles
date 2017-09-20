@@ -19,6 +19,7 @@ export PATH="$PATH:$HOME/bin"
 # custom
 export EDITOR='vim'
 export TERM='screen-256color'
+export ORACLE_HOME='/opt/oracle'
 
 # aliases
 alias xclip="xclip -sel clip"
@@ -27,9 +28,10 @@ alias cowf="fortune | cowsay"
 alias shrug="echo '¯\_(ツ)_/¯' | xclip"
 alias jshell="docker run -it java:9 jshell"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/ben/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-
+# Jabba
 [ -s "/home/ben/.jabba/jabba.sh" ] && source "/home/ben/.jabba/jabba.sh"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
