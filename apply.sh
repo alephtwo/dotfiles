@@ -7,8 +7,12 @@ ABS=$(pwd)
 ln -sf $ABS/.zshrc $HOME/.zshrc
 ln -sf $ABS/zsh/themes/*.zsh-theme $HOME/.oh-my-zsh/themes/
 
-# vim 
+# vim
 ln -sf $ABS/.vimrc $HOME/.vimrc
 
 # irb
 ln -sf $ABS/.irbrc $HOME/.irbrc
+
+# hg
+ln -sf $ABS/.hgrc $HOME/.hgrc
+ln -sf $ABS/hgext $HOME/.hgext

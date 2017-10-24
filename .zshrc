@@ -26,7 +26,6 @@ alias xclip="xclip -sel clip"
 alias uuid="ruby -e 'require \"securerandom\"; print SecureRandom.uuid' | xclip"
 alias cowf="fortune | cowsay"
 alias shrug="echo '¯\_(ツ)_/¯' | xclip"
-alias jshell="docker run -it java:9 jshell"
 
 # Jabba
 [ -s "/home/ben/.jabba/jabba.sh" ] && source "/home/ben/.jabba/jabba.sh"

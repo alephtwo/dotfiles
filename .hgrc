@@ -1,0 +1,28 @@
+[extensions]
+children =
+churn =
+color =
+histedit =
+mercurial_keyring =
+pager =
+prompt = $HOME/.hgext/hg-prompt/prompt.py
+purge =
+rebase =
+shelve =
+show =
+strip =
+
+[color]
+diff.trailingwhitespace = bold red_background
+
+[pager]
+pager = LESS='FRX' less
+
+[ui]
+ignore = $HOME/.hgext/hgignore
+merge = internal:merge
+username = Ben Christianson <thhuntertgm@gmail.com>
+
+[alias]
+glog = log --graph --style=$HOME/.hgext/styles/compact.log
+import = import --no-commit
