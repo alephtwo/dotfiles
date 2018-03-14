@@ -19,7 +19,7 @@ export PATH="$PATH:$HOME/bin"
 # custom
 export EDITOR='vim'
 export TERM='screen-256color'
-export ORACLE_HOME='$HOME/opt/oracle'
+export ORACLE_HOME="$HOME/opt/oracle"
 
 # aliases
 alias xclip="xclip -sel clip"
