@@ -2,6 +2,8 @@
 set nocompatible
 filetype off
 filetype plugin indent on
+au FileType gitcommit set tw=72
+au FileType hgcommit set tw=72
 
 " Use Line Numbers and Syntax
 set nu

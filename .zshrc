@@ -16,6 +16,9 @@ export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/bin"
 
+# fix JWT display issues
+export SWT_GTK3=0
+
 # custom
 export EDITOR='vim'
 export TERM='screen-256color'
@@ -28,7 +31,7 @@ alias cowf="fortune | cowsay"
 alias shrug="echo '¯\_(ツ)_/¯' | xclip"
 
 # Jabba
-[ -s "/home/ben/.jabba/jabba.sh" ] && source "/home/ben/.jabba/jabba.sh"
+[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
