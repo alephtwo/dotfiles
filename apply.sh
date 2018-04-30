@@ -16,3 +16,4 @@ ln -sf $ABS/.irbrc $HOME/.irbrc
 # hg
 ln -sf $ABS/.hgrc $HOME/.hgrc
 ln -sf $ABS/hgext $HOME/.hgext
+hg clone http://bitbucket.org/sjl/hg-prompt/ $HOME/.hgext/hg-prompt
