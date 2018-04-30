@@ -10,9 +10,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-
 # vim
 ln -sf $ABS/.vimrc $HOME/.vimrc
 
-# irb
-ln -sf $ABS/.irbrc $HOME/.irbrc
-
 # hg
 ln -sf $ABS/.hgrc $HOME/.hgrc
 ln -sf $ABS/hgext $HOME/.hgext
