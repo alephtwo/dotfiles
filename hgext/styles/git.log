@@ -1,0 +1,10 @@
+changeset = '{sha} [{phs}] {brnch} {descr}'
+
+sha = '{label("yellow", node|short)}'
+phs = '{label("magenta", phase)}'
+descr = '{desc|firstline|strip}'
+brnch = '({label("green", branch)}{label("cyan", all_books)})'
+
+# bookmarks
+books = "{if(bookmarks, join(bookmarks, ', '))}"
+all_books = "{if(books, ' as {books}')}"
