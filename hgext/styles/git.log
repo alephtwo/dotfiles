@@ -3,7 +3,7 @@ changeset = '{sha} {brnch} {descr}'
 phase_colors = '{}'
 
 sha = '{label(get(dict(secret="red", public="yellow", draft="blue"), phase), node|short)}'
-descr = '{desc|firstline|strip}'
+descr = '{fill(desc,"160")|firstline|strip}'
 brnch = '({label("green", branch)}{label("cyan", all_books)})'
 
 # bookmarks
