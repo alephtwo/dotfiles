@@ -1,7 +1,8 @@
-changeset = '{sha} [{phs}] {brnch} {descr}'
+changeset = '{sha} {brnch} {descr}'
 
-sha = '{label("yellow", node|short)}'
-phs = '{label("magenta", phase)}'
+phase_colors = '{}'
+
+sha = '{label(get(dict(secret="red", public="yellow", draft="blue"), phase), node|short)}'
 descr = '{desc|firstline|strip}'
 brnch = '({label("green", branch)}{label("cyan", all_books)})'
 
