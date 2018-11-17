@@ -6,4 +6,3 @@ descr = '{desc|firstline|strip}'
 
 bookmark = '\033[0;32m[{bookmark}]\033[0m'
 last_bookmark = '\033[0;32m[{bookmark}]\033[0m'
-

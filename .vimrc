@@ -4,7 +4,6 @@ filetype off
 filetype plugin indent on
 au FileType gitcommit set tw=72
 au FileType hgcommit set tw=72
-
 " Use Line Numbers and Syntax
 set nu
 syntax on
@@ -38,3 +37,6 @@ set t_Co=256
 function! Trim()
   %s/\s\+$//e
 endfunction
+
+" Visual niceties
+set colorcolumn=80
