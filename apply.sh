@@ -10,7 +10,3 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-
 # vim
 ln -sf $ABS/.vimrc $HOME/.vimrc
 
-# hg
-# ln -sf $ABS/.hgrc $HOME/.hgrc
-# ln -sf $ABS/hgext $HOME/.hgext
-# hg clone http://bitbucket.org/sjl/hg-prompt/ $HOME/.hgext/hg-prompt
