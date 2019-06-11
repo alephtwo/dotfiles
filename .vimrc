@@ -28,6 +28,7 @@ endif
 set nobackup
 set nowb
 set noswapfile
+set nomodeline " CVE-2019-12735
 
 " Show the status bar
 set laststatus=2
