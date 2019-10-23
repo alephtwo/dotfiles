@@ -12,11 +12,12 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.rvm/scripts/rvm
 
 # set path
+# prepend things here to the path, they're important
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/opt/dart-sass:$PATH"
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export PATH="$PATH:$HOME/bin"
-export PATH="$PATH:$HOME/opt/dart-sass"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.local/bin" # Python stuff
+export PATH="$PATH:$HOME/.rvm/bin" # Ruby "Binaries"
+export PATH="$PATH:$HOME/.local/bin" # PIP "Binaries"
 
 # fix JWT display issues
 export SWT_GTK3=0
@@ -29,7 +30,6 @@ export ORACLE_HOME="$HOME/opt/oracle"
 # aliases
 alias xclip="xclip -sel clip"
 alias uuid="ruby -e 'require \"securerandom\"; print SecureRandom.uuid' | xclip"
-alias cowf="fortune | cowsay"
 alias shrug="echo '¯\_(ツ)_/¯' | xclip"
 
 # Jabba
