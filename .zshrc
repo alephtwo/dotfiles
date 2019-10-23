@@ -13,10 +13,10 @@ source $HOME/.rvm/scripts/rvm
 
 # set path
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/bin"
-export PATH="$PATH:$HOME/.local/bin" # Python stuff
 export PATH="$PATH:$HOME/opt/dart-sass"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.local/bin" # Python stuff
 
 # fix JWT display issues
 export SWT_GTK3=0
