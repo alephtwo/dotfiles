@@ -10,5 +10,5 @@ function hg_prompt_info {
   hg prompt "${hg_prefix}‹${hg_info}›" 2>/dev/null
 }
 
-PROMPT='%{$fg[green]%}%n%{$reset_color%} %2~ $(hg_prompt_info)$(git_prompt_info)%{$reset_color%}%B»%b '
+PROMPT='%{$fg[green]%}ben%{$reset_color%} %2~ $(hg_prompt_info)$(git_prompt_info)%{$reset_color%}%B»%b '
 RPS1="${return_code}"

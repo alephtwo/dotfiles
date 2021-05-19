@@ -41,3 +41,6 @@ endfunction
 
 " Visual niceties
 set colorcolumn=80
+
+" macOS fixes
+set backspace=indent,eol,start
