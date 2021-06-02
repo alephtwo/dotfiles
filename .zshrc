@@ -12,6 +12,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Ruby "Binaries"
 # export PATH="$PATH:$HOME/.local/bin" # PIP "Binaries"
+export PATH="$PATH:/usr/local/sbin"
 
 # custom
 export EDITOR='vim'
