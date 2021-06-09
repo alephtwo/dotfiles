@@ -10,6 +10,7 @@ brew "tokei"
 brew "tmux"
 brew "vim"
 brew "wget"
+brew "subversion"
 
 cask "iterm2"
 cask "pgadmin4"
