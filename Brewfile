@@ -14,5 +14,7 @@ brew "wget"
 brew "subversion"
 
 cask "kap"
+cask "keepassxc"
 cask "iterm2"
 cask "pgadmin4"
+cask "rectangle"
