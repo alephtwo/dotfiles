@@ -18,6 +18,16 @@ export PATH="$PATH:/usr/local/sbin"
 export EDITOR='vim'
 export TERM='screen-256color'
 
+# aliases
+alias xclip="xclip -sel clip"
+alias ytdlm="youtube-dl --extract-audio --audio-format mp3"
+
+# LaTeX
+export TEXMFHOME=$HOME/.texmf
+
+# RVM
+[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
+
 # Jabba
 [ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
 
