@@ -25,6 +25,9 @@ export TERM='screen-256color'
 alias xclip="xclip -sel clip"
 alias ytdlm="youtube-dl --extract-audio --audio-format mp3"
 
+# LaTeX
+export TEXMFHOME=$HOME/.texmf
+
 # RVM
 [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
 
