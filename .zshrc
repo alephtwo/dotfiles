@@ -3,7 +3,11 @@ export ZSH=$HOME/.oh-my-zsh
 export UPDATE_ZSH_DAYS=14
 ZSH_THEME="aleph"
 ZSH_TMUX_AUTOSTART="true"
-plugins=(git tmux)
+plugins=(
+  git
+  tmux
+  asdf
+)
 source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
