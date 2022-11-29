@@ -35,8 +35,15 @@ export TEXMFHOME=$HOME/.texmf
 # RVM
 [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
 
-# Jabba
-[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
+# asdf
+if [[ -v ASDF_DIR ]]; then
+  # Set JAVA_HOME
+  [ -s "$ASDF_DIR/plugins/java/set-java-home.zsh" ] && \
+    . "$ASDF_DIR/plugins/java/set-java-home.zsh"
+  # Disable HTML Docs and manpages for erlang builds
+  export KERL_INSTALL_HTMLDOCS=no
+  export KERL_INSTALL_MANPAGES=no
+fi
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
