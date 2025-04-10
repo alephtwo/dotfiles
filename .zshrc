@@ -18,7 +18,7 @@ if [[ -v ASDF_DATA_DIR ]]; then
     # Set up completions
     fpath=("${ASDF_DATA_DIR}/completions" $fpath)
   else
-    echo "Run `asdf completion zsh > \"$ASDF_DATA_DIR/completions/_asdf\"`"
+    echo "Run \`asdf completion zsh > \"$ASDF_DATA_DIR/completions/_asdf\"\`"
   fi
 
   # Set JAVA_HOME
