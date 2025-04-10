@@ -21,22 +21,17 @@ path+=("${HOME}/.local/bin") # PIP "Binaries"
 # asdf #########################################################################
 if [[ $+commands[asdf] ]]; then
   export ASDF_DATA_DIR="$HOME/.asdf"
+
   # prefix path with asdf
   path=("${ASDF_DATA_DIR}/shims" $path)
 
   # Create the dir if it doesn't already exist
-  if [[ ! -d "${ASDF_DATA_DIR}" ]]; then
-    mkdir -p "${ASDF_DATA_DIR}"
-  fi
+  [[ ! -d "${ASDF_DATA_DIR}" ]] && mkdir -p "${ASDF_DATA_DIR}"
+  [[ ! -d "${ASDF_DATA_DIR}/completions" ]] && mkdir -p "${ASDF_DATA_DIR}/completions"
 
-  # If the completion file doesn't exist yet, we need to autoload it and
-  # bind it to `asdf`. Otherwise, compinit will have already done that.
-  if [[ ! -f "${ZSH_CACHE_DIR}/completions/_asdf" ]]; then
-    typeset -g -A _comps
-    autoload -Uz _asdf
-    _comps[asdf]=_asdf
-  fi
-  asdf completion zsh >| "${ZSH_CACHE_DIR}/completions/_asdf"
+  # set completions if they don't exist
+  [[ ! -f "${ASDF_DATA_DIR}/completions/_asdf" ]] && asdf completion zsh > "${ASDF_DATA_DIR}/completions/_asdf"
+  fpath=(${ASDF_DATA_DIR}/completions $fpath)
 
   # Set JAVA_HOME
   [ -s "$ASDF_DATA_DIR/plugins/java/set-java-home.zsh" ] && \
