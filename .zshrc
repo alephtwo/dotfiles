@@ -3,38 +3,48 @@ export ZSH=$HOME/.oh-my-zsh
 export UPDATE_ZSH_DAYS=14
 ZSH_THEME="aleph"
 ZSH_TMUX_AUTOSTART="true"
-plugins=(git tmux)
-source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH/oh-my-zsh.sh
+plugins=(
+  asdf
+  git
+  tmux
+)
+source "${ZSH}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "${ZSH}/oh-my-zsh.sh"
 
-# set path
-# prepend things here to the path, they're important
-export PATH="$HOME/bin:$PATH"
-export PATH="$PATH:$HOME/.rvm/bin" # Ruby "Binaries"
-# export PATH="$PATH:$HOME/.local/bin" # PIP "Binaries"
-export PATH="$PATH:/usr/local/sbin"
+# Set Path #####################################################################
+# add in custom bins
+path=("${HOME}/bin" $path)
+# add stuff installed by pip
+path+=("${HOME}/.local/bin") # PIP "Binaries"
 
-# custom
+# asdf #########################################################################
+if [[ $+commands[asdf] ]]; then
+  export ASDF_DATA_DIR="$HOME/.asdf"
+
+  # prefix path with asdf
+  path=("${ASDF_DATA_DIR}/shims" $path)
+
+  # Set JAVA_HOME
+  [ -s "$ASDF_DATA_DIR/plugins/java/set-java-home.zsh" ] && \
+    . "$ASDF_DATA_DIR/plugins/java/set-java-home.zsh"
+  # Disable HTML Docs and manpages for erlang builds
+  export KERL_INSTALL_HTMLDOCS=no
+  export KERL_INSTALL_MANPAGES=no
+
+  # LaTeX
+  export TEXMFHOME=$HOME/.texmf
+fi
+
+# NVM
+export NVM_DIR="${HOME}/.nvm"
+[ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
+[ -s "${NVM_DIR}/bash_completion" ] && \. "${NVM_DIR}/bash_completion"  # This loads nvm bash_completion
+
+# Configuration ################################################################
+# fix JWT display issues
+export SWT_GTK3=0
 export EDITOR='vim'
 export TERM='screen-256color'
 
-# aliases
-alias xclip="xclip -sel clip"
-alias ytdlm="youtube-dl --extract-audio --audio-format mp3"
-
-# LaTeX
-export TEXMFHOME=$HOME/.texmf
-
-# RVM
-[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
-
-# Jabba
-[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# RVM
-[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
+alias xclip=pbcopy
+alias ls=eza

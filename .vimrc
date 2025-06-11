@@ -19,6 +19,11 @@ set smarttab
 set tabstop=2
 set shiftwidth=2
 
+" Enable the mouse
+if has('mouse')
+  set mouse=a
+endif
+
 " Disable backups
 set nobackup
 set nowb
@@ -36,6 +41,3 @@ endfunction
 
 " Visual niceties
 set colorcolumn=80
-
-" macOS fixes
-set backspace=indent,eol,start
