@@ -4,6 +4,7 @@ export UPDATE_ZSH_DAYS=14
 ZSH_THEME="aleph"
 ZSH_TMUX_AUTOSTART="true"
 plugins=(
+  asdf
   git
   tmux
 )
@@ -13,8 +14,6 @@ source "${ZSH}/oh-my-zsh.sh"
 # Set Path #####################################################################
 # add in custom bins
 path=("${HOME}/bin" $path)
-# add standard paths
-path+=(":/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games")
 # add stuff installed by pip
 path+=("${HOME}/.local/bin") # PIP "Binaries"
 
@@ -24,14 +23,6 @@ if [[ $+commands[asdf] ]]; then
 
   # prefix path with asdf
   path=("${ASDF_DATA_DIR}/shims" $path)
-
-  # Create the dir if it doesn't already exist
-  [[ ! -d "${ASDF_DATA_DIR}" ]] && mkdir -p "${ASDF_DATA_DIR}"
-  [[ ! -d "${ASDF_DATA_DIR}/completions" ]] && mkdir -p "${ASDF_DATA_DIR}/completions"
-
-  # set completions if they don't exist
-  [[ ! -f "${ASDF_DATA_DIR}/completions/_asdf" ]] && asdf completion zsh > "${ASDF_DATA_DIR}/completions/_asdf"
-  fpath=(${ASDF_DATA_DIR}/completions $fpath)
 
   # Set JAVA_HOME
   [ -s "$ASDF_DATA_DIR/plugins/java/set-java-home.zsh" ] && \
@@ -55,6 +46,5 @@ export SWT_GTK3=0
 export EDITOR='vim'
 export TERM='screen-256color'
 
-# aliases
-alias xclip="xclip -sel clip"
-alias ytdlm="youtube-dl --extract-audio --audio-format mp3"
+alias xclip=pbcopy
+alias ls=eza
