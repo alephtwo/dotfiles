@@ -36,5 +36,5 @@ export EDITOR='vim'
 export TERM='screen-256color'
 
 # Aliases #####################################################################
+[[ $+commands[eza] ]] && alias ls="eza"
 alias xclip=pbcopy
-[[ $+commands[eza] ]] && alias ls=eza
