@@ -4,8 +4,8 @@ export UPDATE_ZSH_DAYS=14
 ZSH_THEME="aleph"
 ZSH_TMUX_AUTOSTART="true"
 plugins=(
-  asdf
   git
+  mise
   tmux
 )
 source "${ZSH}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
@@ -16,29 +16,18 @@ source "${ZSH}/oh-my-zsh.sh"
 path=("${HOME}/bin" $path)
 # add stuff installed by pip
 path+=("${HOME}/.local/bin") # PIP "Binaries"
+# add psql to path
+path+=("/opt/homebrew/opt/libpq/bin")
 
-# asdf #########################################################################
-if [[ $+commands[asdf] ]]; then
-  export ASDF_DATA_DIR="$HOME/.asdf"
+# mise ########################################################################
+[[ $+commands[mise] ]] && export MISE_DATA_DIR="$HOME/.mise"
 
-  # prefix path with asdf
-  path=("${ASDF_DATA_DIR}/shims" $path)
-
-  # Set JAVA_HOME
-  [ -s "$ASDF_DATA_DIR/plugins/java/set-java-home.zsh" ] && \
-    . "$ASDF_DATA_DIR/plugins/java/set-java-home.zsh"
-  # Disable HTML Docs and manpages for erlang builds
-  export KERL_INSTALL_HTMLDOCS=no
-  export KERL_INSTALL_MANPAGES=no
-
-  # LaTeX
-  export TEXMFHOME=$HOME/.texmf
+# NVM #########################################################################
+if [[ $+commands[nvm] ]]; then
+  export NVM_DIR="${HOME}/.nvm"
+  [ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
+  [ -s "${NVM_DIR}/bash_completion" ] && \. "${NVM_DIR}/bash_completion"  # This loads nvm bash_completion
 fi
-
-# NVM
-export NVM_DIR="${HOME}/.nvm"
-[ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
-[ -s "${NVM_DIR}/bash_completion" ] && \. "${NVM_DIR}/bash_completion"  # This loads nvm bash_completion
 
 # Configuration ################################################################
 # fix JWT display issues
@@ -46,5 +35,6 @@ export SWT_GTK3=0
 export EDITOR='vim'
 export TERM='screen-256color'
 
+# Aliases #####################################################################
 alias xclip=pbcopy
-alias ls=eza
+[[ $+commands[eza] ]] && alias ls=eza
