@@ -20,14 +20,12 @@ path+=(":/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 path+=("${HOME}/.local/bin") # PIP "Binaries"
 
 # mise ########################################################################
-[[ $+commands[mise] ]] && export MISE_DATA_DIR="$HOME/.mise"
+(( $+commands[mise] )) && export MISE_DATA_DIR="$HOME/.mise"
 
 # NVM #########################################################################
-if [[ $+commands[nvm] ]]; then
-  export NVM_DIR="${HOME}/.nvm"
-  [ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
-  [ -s "${NVM_DIR}/bash_completion" ] && \. "${NVM_DIR}/bash_completion"  # This loads nvm bash_completion
-fi
+export NVM_DIR="${HOME}/.nvm"
+[ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
+[ -s "${NVM_DIR}/bash_completion" ] && \. "${NVM_DIR}/bash_completion"  # This loads nvm bash_completion
 
 # Configuration ################################################################
 # fix JWT display issues
@@ -36,6 +34,6 @@ export EDITOR='vim'
 export TERM='screen-256color'
 
 # aliases
-[[ $+commands[eza] ]] && alias ls="eza"
+(( $+commands[eza] )) && alias ls="eza"
 alias xclip="xclip -sel clip"
 alias ytdlm="youtube-dl --extract-audio --audio-format mp3"
