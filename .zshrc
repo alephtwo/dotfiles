@@ -8,7 +8,6 @@ plugins=(
   mise
   tmux
 )
-source "${ZSH}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "${ZSH}/oh-my-zsh.sh"
 
 # Set Path #####################################################################
@@ -32,3 +31,6 @@ export TERM='screen-256color'
 (( $+commands[eza] )) && alias ls="eza"
 alias xclip="xclip -sel clip"
 alias ytdlm="youtube-dl --extract-audio --audio-format mp3"
+
+# Syntax Highlighting
+source "${ZSH}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
