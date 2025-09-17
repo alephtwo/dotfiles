@@ -4,6 +4,7 @@ export UPDATE_ZSH_DAYS=14
 ZSH_THEME="aleph"
 ZSH_TMUX_AUTOSTART="true"
 plugins=(
+  docker
   git
   mise
   tmux
@@ -22,19 +23,19 @@ path+=("/opt/homebrew/opt/libpq/bin")
 # mise ########################################################################
 [[ $+commands[mise] ]] && export MISE_DATA_DIR="$HOME/.mise"
 
-# NVM #########################################################################
-if [[ $+commands[nvm] ]]; then
-  export NVM_DIR="${HOME}/.nvm"
-  [ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"  # This loads nvm
-  [ -s "${NVM_DIR}/bash_completion" ] && \. "${NVM_DIR}/bash_completion"  # This loads nvm bash_completion
-fi
-
 # Configuration ################################################################
 # fix JWT display issues
 export SWT_GTK3=0
 export EDITOR='vim'
 export TERM='screen-256color'
+export SKIM_DEFAULT_COMMAND="fd --type f"
 
 # Aliases #####################################################################
 [[ $+commands[eza] ]] && alias ls="eza"
 alias xclip=pbcopy
+
+# zscaler #####################################################################
+export NODE_EXTRA_CA_CERTS="$HOME/zscaler/Zscaler Root CA.pem"
+export HEX_CACERTS_PATH="$HOME/zscaler/Zscaler Root CA.pem"
+export GLEAM_CACERTS_PATH="$HOME/zscaler/Zscaler Root CA.pem"
+export REBAR_CONFIG="$HOME/.config/rebar3/rebar.config"
