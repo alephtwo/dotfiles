@@ -9,7 +9,6 @@ plugins=(
   mise
   tmux
 )
-source "${ZSH}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "${ZSH}/oh-my-zsh.sh"
 
 # Set Path #####################################################################
@@ -21,7 +20,7 @@ path+=("${HOME}/.local/bin") # PIP "Binaries"
 path+=("/opt/homebrew/opt/libpq/bin")
 
 # mise ########################################################################
-[[ $+commands[mise] ]] && export MISE_DATA_DIR="$HOME/.mise"
+(( $+commands[mise] )) && export MISE_DATA_DIR="$HOME/.mise"
 
 # Configuration ################################################################
 # fix JWT display issues
@@ -31,7 +30,7 @@ export TERM='screen-256color'
 export SKIM_DEFAULT_COMMAND="fd --type f"
 
 # Aliases #####################################################################
-[[ $+commands[eza] ]] && alias ls="eza"
+(( $+commands[eza] )) && alias ls="eza"
 alias xclip=pbcopy
 
 # zscaler #####################################################################
