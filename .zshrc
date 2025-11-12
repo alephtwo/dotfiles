@@ -18,6 +18,7 @@ path=("${HOME}/bin" $path)
 path+=("${HOME}/.local/bin") # PIP "Binaries"
 # add psql to path
 path+=("/opt/homebrew/opt/libpq/bin")
+path+=("${HOME}/.pnpm-global")
 
 # mise ########################################################################
 (( $+commands[mise] )) && export MISE_DATA_DIR="$HOME/.mise"
