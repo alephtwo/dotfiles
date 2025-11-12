@@ -16,8 +16,11 @@ path=("${HOME}/bin" $path)
 # add standard paths
 path+=(":/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games")
 # add stuff installed by pip
-path+=("${HOME}/.local/bin") # PIP "Binaries"
-path+=("${HOME}/.pnpm-global")
+path+=("${HOME}/.local/bin")
+
+# pnpm ########################################################################
+export PNPM_HOME="${HOME}/.pnpm-global"
+path+=("${PNPM_HOME}")
 
 # mise ########################################################################
 (( $+commands[mise] )) && export MISE_DATA_DIR="$HOME/.mise"
