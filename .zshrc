@@ -1,3 +1,6 @@
+# mise ########################################################################
+(( $+commands[mise] )) && export MISE_DATA_DIR="$HOME/.mise"
+
 # oh-my-zsh configuration
 export ZSH=$HOME/.oh-my-zsh
 export UPDATE_ZSH_DAYS=14
@@ -7,7 +10,6 @@ plugins=(
   docker
   git
   mise
-  tmux
 )
 source "${ZSH}/oh-my-zsh.sh"
 
@@ -24,22 +26,28 @@ path+=("${HOME}/.local/bin")
 export PNPM_HOME="${HOME}/.pnpm-global"
 path+=("${PNPM_HOME}")
 
-# mise ########################################################################
-(( $+commands[mise] )) && export MISE_DATA_DIR="$HOME/.mise"
-
 # Configuration ################################################################
 # fix JWT display issues
 export SWT_GTK3=0
 export EDITOR='vim'
 export TERM='screen-256color'
 export SKIM_DEFAULT_COMMAND="fd --type f"
+export TG_NO_DESTROY_DEPENDENCIES_CHECK="true"
 
 # Aliases #####################################################################
 (( $+commands[eza] )) && alias ls="eza"
 alias xclip=pbcopy
 
 # zscaler #####################################################################
-export NODE_EXTRA_CA_CERTS="$HOME/zscaler/Zscaler Root CA.pem"
-export HEX_CACERTS_PATH="$HOME/zscaler/Zscaler Root CA.pem"
-export GLEAM_CACERTS_PATH="$HOME/zscaler/Zscaler Root CA.pem"
+ZSCALER_PEM="$HOME/zscaler/Zscaler Root CA.pem"
+# cli
+#export SSL_CERT_FILE="${ZSCALER_PEM}"
+#export CURL_CA_BUNDLE="${ZSCALER_PEM}"
+# node
+export NODE_EXTRA_CA_CERTS="${ZSCALER_PEM}"
+# python
+# export POETRY_CA_FILE="${ZSCALER_PEM}"
+# export REQUESTS_CA_BUNDLE="${ZSCALER_PEM}"
+# elixir/erlang
 export REBAR_CONFIG="$HOME/.config/rebar3/rebar.config"
+export HEX_CACERTS_PATH="${ZSCALER_PEM}"
