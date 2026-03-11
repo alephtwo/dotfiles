@@ -6,7 +6,6 @@ ZSH_TMUX_AUTOSTART="true"
 plugins=(
   git
   mise
-  tmux
 )
 source "${ZSH}/oh-my-zsh.sh"
 
