@@ -5,11 +5,15 @@ ZSH_THEME="aleph"
 ZSH_TMUX_AUTOSTART="true"
 plugins=(
   git
-  mise
-)
+  mise)
+
+# mise ########################################################################
+(( $+commands[mise] )) && export MISE_DATA_DIR="$HOME/.mise"
+
+# oh-my-zsh startup ###########################################################
 source "${ZSH}/oh-my-zsh.sh"
 
-# Set Path #####################################################################
+# Set Path ####################################################################
 # add in custom bins
 path=("${HOME}/bin" $path)
 # add standard paths
@@ -21,8 +25,6 @@ path+=("${HOME}/.local/bin")
 export PNPM_HOME="${HOME}/.pnpm-global"
 path+=("${PNPM_HOME}")
 
-# mise ########################################################################
-(( $+commands[mise] )) && export MISE_DATA_DIR="$HOME/.mise"
 
 # Configuration ################################################################
 # fix JWT display issues
