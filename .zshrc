@@ -11,9 +11,14 @@ plugins=(
   git
   mise
 )
+
+# mise ########################################################################
+(( $+commands[mise] )) && export MISE_DATA_DIR="$HOME/.mise"
+
+# oh-my-zsh startup ###########################################################
 source "${ZSH}/oh-my-zsh.sh"
 
-# Set Path #####################################################################
+# Set Path ####################################################################
 # add in custom bins
 path=("${HOME}/bin" $path)
 # add stuff installed by pip
