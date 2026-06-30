@@ -23,8 +23,7 @@ path+=("${HOME}/.local/bin")
 
 # pnpm ########################################################################
 export PNPM_HOME="${HOME}/.pnpm-global"
-path+=("${PNPM_HOME}")
-
+path+=("${PNPM_HOME}/bin")
 
 # Configuration ################################################################
 # fix JWT display issues
