@@ -1,6 +1,6 @@
 [font]
 normal = { family = "Hack" }
-size = 14
+size = 15
 
 [window]
 dimensions = { columns = 180, lines = 50 }

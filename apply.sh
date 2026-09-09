@@ -15,3 +15,8 @@ ln -sf "${pwd}/.vimrc" "$HOME/.vimrc"
 alacritty_config_dir="$HOME/.config/alacritty"
 [[ ! -d "${alacritty_config_dir}" ]] && mkdir -p "${alacritty_config_dir}"
 ln -sf "${pwd}/alacritty.toml" "${alacritty_config_dir}/alacritty.toml"
+
+# ghostty
+ghostty_config_dir="$HOME/.config/ghostty"
+[[ ! -d "${ghostty_config_dir}" ]] && mkdir - p "${ghostty_config_dir}"
+ln -sf "${pwd}/config.ghostty" "${ghostty_config_dir}/config.ghostty"

@@ -1,0 +1,21 @@
+# Startup
+command = /bin/zsh -l -c "tmux attach || tmux"
+
+# Fonts
+font-family = "Hack"
+font-size = 15
+font-thicken = true
+
+# Window
+window-width = 180
+window-height = 50
+window-padding-x = 5
+window-padding-y = 5
+
+# Palette
+background = 1e1e1e
+
+# Keyboard Shortcuts
+keybind = cmd+shift+c=copy_to_clipboard
+keybind = cmd+shift+v=paste_from_clipboard
+

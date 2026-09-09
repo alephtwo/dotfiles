@@ -29,7 +29,7 @@ path+=("${HOME}/.local/bin")
 
 # pnpm ########################################################################
 export PNPM_HOME="${HOME}/.pnpm-global"
-path+=("${PNPM_HOME}")
+path+=("${PNPM_HOME}/bin")
 
 # Configuration ################################################################
 # fix JWT display issues
@@ -45,14 +45,19 @@ alias xclip=pbcopy
 
 # zscaler #####################################################################
 ZSCALER_PEM="$HOME/zscaler/Zscaler Root CA.pem"
+
 # cli
-#export SSL_CERT_FILE="${ZSCALER_PEM}"
-#export CURL_CA_BUNDLE="${ZSCALER_PEM}"
+# export SSL_CERT_FILE="${ZSCALER_PEM}"
+# export CURL_CA_BUNDLE="${ZSCALER_PEM}"
+
 # node
 export NODE_EXTRA_CA_CERTS="${ZSCALER_PEM}"
+
 # python
+export PIP_CERT="${ZSCALER_PEM}"
 # export POETRY_CA_FILE="${ZSCALER_PEM}"
 # export REQUESTS_CA_BUNDLE="${ZSCALER_PEM}"
+
 # elixir/erlang
-export REBAR_CONFIG="$HOME/.config/rebar3/rebar.config"
-export HEX_CACERTS_PATH="${ZSCALER_PEM}"
+# export REBAR_CONFIG="$HOME/.config/rebar3/rebar.config"
+# export HEX_CACERTS_PATH="${ZSCALER_PEM}"
