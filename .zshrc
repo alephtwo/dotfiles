@@ -10,6 +10,7 @@ plugins=(
   docker
   git
   mise
+  zsh-syntax-highlighting
 )
 
 # mise ########################################################################
@@ -61,3 +62,6 @@ export PIP_CERT="${ZSCALER_PEM}"
 # elixir/erlang
 # export REBAR_CONFIG="$HOME/.config/rebar3/rebar.config"
 # export HEX_CACERTS_PATH="${ZSCALER_PEM}"
+
+# Oracle
+export ORACLE_HOME="$HOME/.oracle"

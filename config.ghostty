@@ -12,10 +12,20 @@ window-height = 50
 window-padding-x = 5
 window-padding-y = 5
 
-# Palette
+# Theme
+theme = Ayu
 background = 1e1e1e
 
 # Keyboard Shortcuts
 keybind = cmd+shift+c=copy_to_clipboard
 keybind = cmd+shift+v=paste_from_clipboard
+
+# Misc
+confirm-close-surface = false
+
+#
+window-colorspace = display-p3
+alpha-blending = linear-corrected
+font-thicken = true
+font-thicken-strength
 

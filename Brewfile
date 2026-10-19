@@ -44,6 +44,7 @@ brew 'watch'
 brew 'wget'
 
 cask 'alacritty'
+cask 'claude-code'
 cask 'copilot-cli'
 cask 'gimp'
 cask 'iina'
