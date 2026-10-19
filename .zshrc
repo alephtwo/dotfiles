@@ -5,7 +5,9 @@ ZSH_THEME="aleph"
 ZSH_TMUX_AUTOSTART="true"
 plugins=(
   git
-  mise)
+  mise
+  zsh-syntax-highlighting
+)
 
 # mise ########################################################################
 (( $+commands[mise] )) && export MISE_DATA_DIR="$HOME/.mise"
@@ -36,5 +38,3 @@ export TERM='screen-256color'
 alias xclip="xclip -sel clip"
 alias ytdlm="youtube-dl --extract-audio --audio-format mp3"
 
-# Syntax Highlighting
-source "${ZSH}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
